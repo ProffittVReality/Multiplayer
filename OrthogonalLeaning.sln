@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrthogonalLeaning", "Assembly-CSharp-firstpass.csproj", "{A5D7EE36-9129-F4F7-EA72-EA253E0DD900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrthogonalLeaning", "Assembly-CSharp.csproj", "{4F96312E-F6DB-F673-A5E4-CA605EB9D663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrthogonalLeaning", "Assembly-CSharp-Editor.csproj", "{9BC4C069-D3DE-BC69-641F-76D024B51FBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5D7EE36-9129-F4F7-EA72-EA253E0DD900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D7EE36-9129-F4F7-EA72-EA253E0DD900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D7EE36-9129-F4F7-EA72-EA253E0DD900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D7EE36-9129-F4F7-EA72-EA253E0DD900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F96312E-F6DB-F673-A5E4-CA605EB9D663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F96312E-F6DB-F673-A5E4-CA605EB9D663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F96312E-F6DB-F673-A5E4-CA605EB9D663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F96312E-F6DB-F673-A5E4-CA605EB9D663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC4C069-D3DE-BC69-641F-76D024B51FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC4C069-D3DE-BC69-641F-76D024B51FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC4C069-D3DE-BC69-641F-76D024B51FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC4C069-D3DE-BC69-641F-76D024B51FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
