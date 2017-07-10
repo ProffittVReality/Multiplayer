@@ -5,8 +5,6 @@ using UnityEngine;
 public class ViveManager : MonoBehaviour {
 
 	public GameObject head;
-	public GameObject leftHand;
-	public GameObject rightHand;
 
 	public static ViveManager Instance;
 

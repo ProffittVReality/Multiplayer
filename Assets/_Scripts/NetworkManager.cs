@@ -5,6 +5,7 @@ using UnityEngine;
 public class NetworkManager : MonoBehaviour {
 
 	public GameObject headPrefab;
+	public GameObject chariot;
 	public GameObject leftHandPrefab;
 	public GameObject rightHandPrefab;
 
@@ -53,7 +54,9 @@ public class NetworkManager : MonoBehaviour {
 	{
 		Debug.Log("OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
 		PhotonNetwork.Instantiate (headPrefab.name, ViveManager.Instance.head.transform.position, ViveManager.Instance.head.transform.rotation, 0);
-		PhotonNetwork.Instantiate (leftHandPrefab.name, ViveManager.Instance.leftHand.transform.position, ViveManager.Instance.leftHand.transform.rotation, 0);
+		PhotonNetwork.Instantiate (chariot.name, ChariotScript.Instance.bike.transform.position, ChariotScript.Instance.bike.transform.rotation, 0);
+		/*PhotonNetwork.Instantiate (leftHandPrefab.name, ViveManager.Instance.leftHand.transform.position, ViveManager.Instance.leftHand.transform.rotation, 0);
 		PhotonNetwork.Instantiate (rightHandPrefab.name, ViveManager.Instance.rightHand.transform.position, ViveManager.Instance.rightHand.transform.rotation, 0);
+		*/
 	}
 }
