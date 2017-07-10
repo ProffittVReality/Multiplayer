@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DynaMob\AnimationTestScene\camera_em.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRBoundary.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCameraRig.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCommon.cs" />
@@ -554,6 +555,8 @@
      <Compile Include="Assets\VZ\Scripts\core\VZPlugin.cs" />
      <Compile Include="Assets\VZ\Scripts\test\VZBikeAnim.cs" />
      <Compile Include="Assets\VZ\Scripts\test\VZBikeTest.cs" />
+     <Compile Include="Assets\_Scripts\ChariotCopy.cs" />
+     <Compile Include="Assets\_Scripts\ChariotScript.cs" />
      <Compile Include="Assets\_Scripts\CopyScript.cs" />
      <Compile Include="Assets\_Scripts\NetworkManager.cs" />
      <Compile Include="Assets\_Scripts\ViveManager.cs" />
@@ -622,11 +625,11 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity5.5/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
- <Reference Include="websocket-sharp">
- <HintPath>C:/Users/VRPCII/Documents/GitHub/Multiplayer/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
- </Reference>
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/VRPCII/Documents/GitHub/Multiplayer/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>C:/Users/VRPCII/Documents/GitHub/Multiplayer/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
