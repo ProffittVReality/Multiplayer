@@ -1,4 +1,6 @@
-﻿Shader "VZ/NoZFont" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "VZ/NoZFont" {
 
    Properties 
    { 
@@ -38,7 +40,7 @@
          v2f vert (appdata_full v)
          {
             v2f o;
-            o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+            o.pos = UnityObjectToClipPos (v.vertex);
             o.color = v.color * _Color;
             o.texcoord = v.texcoord;
             return o;
