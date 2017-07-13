@@ -24,7 +24,11 @@ public class RiderScript : MonoBehaviour {
             head = GameObject.Find("Avatar(Clone)");
             left = GameObject.Find("LHand(Clone)");
             right = GameObject.Find("RHand(Clone)");
-            cameraRig.transform.position = chariot.transform.position;
+            
+            Vector3 cameraPosition = chariot.transform.position;
+            cameraPosition.z += 1.3f;
+            cameraRig.transform.position = cameraPosition;
+
             cameraRig.transform.SetParent(chariot.transform);
             head.transform.SetParent(chariot.transform);
             left.transform.SetParent(chariot.transform);
