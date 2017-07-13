@@ -12,12 +12,12 @@ public class ViveRiderScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		isAttached = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (!isAttached && GameObject.Find("Chariot(Clone)") != null)
+		if (!isAttached && GameObject.Find("Avatar(Clone)") != null)
 		{
 			chariot = GameObject.Find("Chariot(Clone)");
 			head = GameObject.Find("Avatar(Clone)");
