@@ -558,11 +558,13 @@
      <Compile Include="Assets\_Scripts\ChariotCopy.cs" />
      <Compile Include="Assets\_Scripts\ChariotScript.cs" />
      <Compile Include="Assets\_Scripts\CopyScript.cs" />
-     <Compile Include="Assets\_Scripts\NetworkManager.cs" />
      <Compile Include="Assets\_Scripts\OculusCopyScript.cs" />
      <Compile Include="Assets\_Scripts\OculusManager.cs" />
      <Compile Include="Assets\_Scripts\OculusNetworkManager.cs" />
+     <Compile Include="Assets\_Scripts\RiderScript.cs" />
      <Compile Include="Assets\_Scripts\ViveManager.cs" />
+     <Compile Include="Assets\_Scripts\ViveNetworkManager.cs" />
+     <Compile Include="Assets\_Scripts\ViveRiderScript.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
