@@ -11,6 +11,8 @@ public class RiderScript : MonoBehaviour {
     public GameObject cameraRig;
     bool isAttached = false;
 
+    public GameObject bike;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -29,7 +31,12 @@ public class RiderScript : MonoBehaviour {
             cameraPosition.z += 1.3f;
             cameraRig.transform.position = cameraPosition;
 
+            bike.transform.position = chariot.transform.position;
+            bike.transform.rotation = chariot.transform.rotation;
+            bike.SetActive(true);
+
             cameraRig.transform.SetParent(chariot.transform);
+            bike.transform.SetParent(chariot.transform);
             head.transform.SetParent(chariot.transform);
             left.transform.SetParent(chariot.transform);
             right.transform.SetParent(chariot.transform);
