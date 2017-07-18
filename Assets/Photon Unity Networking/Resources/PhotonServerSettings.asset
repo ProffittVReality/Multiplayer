@@ -44,4 +44,6 @@ MonoBehaviour:
   - TaggedPlayer
   - AddPoints
   - SubtractPoints
+  - PunAddPoints
+  - PunSubtractPoints
   DisableAutoOpenWizard: 1
