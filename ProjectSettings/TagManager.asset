@@ -11,6 +11,8 @@ TagManager:
   - Three Point
   - Four Point
   - Five Point
+  - Left Hand
+  - Right Hand
   layers:
   - Default
   - TransparentFX

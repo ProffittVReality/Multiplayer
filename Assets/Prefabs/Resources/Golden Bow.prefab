@@ -232,6 +232,8 @@ GameObject:
   - component: {fileID: 114123912909390634}
   - component: {fileID: 114134058767849074}
   - component: {fileID: 65089015455999274}
+  - component: {fileID: 114274252310638450}
+  - component: {fileID: 65863451938388320}
   m_Layer: 0
   m_Name: Golden Bow
   m_TagString: Bow
@@ -868,6 +870,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5, z: 2}
   m_Center: {x: 0, y: 0, z: -0.5}
+--- !u!65 &65863451938388320
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293677667667114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8961854, y: 1.5, z: 2.6686823}
+  m_Center: {x: -0.0104459, y: 0, z: -0.50028163}
 --- !u!114 &114123912909390634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -959,6 +973,17 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &114274252310638450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293677667667114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca181a6819dec744e8b23deed905a5e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137802508824081300
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -14,6 +14,8 @@ public class Arrow : MonoBehaviour {
     bool fourPoint = false;
     bool fivePoint = false;
 
+    OVRInput.Button handButton;
+
 	// Use this for initialization
 	void Start () {
         triggerDown = false;
@@ -21,15 +23,18 @@ public class Arrow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+        if (ArrowManager.Instance.BowAttached() && OVRInput.GetDown(ArrowManager.Instance.GetButton()))
             triggerDown = true;
-        if (OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger))
+        if (ArrowManager.Instance.BowAttached() && OVRInput.GetUp(ArrowManager.Instance.GetButton()))
             triggerDown = false;
 
         if (isFired)
         {
             transform.LookAt(transform.position + transform.GetComponent<Rigidbody>().velocity);
         }
+
+        if (ArrowManager.Instance.BowAttached())
+            handButton = ArrowManager.Instance.GetButton();
     }
 
     public void IsFired()

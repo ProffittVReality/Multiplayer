@@ -6,8 +6,6 @@ public class ViveRiderScript : MonoBehaviour {
 
 	GameObject chariot;
 	GameObject head;
-	GameObject left;
-	GameObject right;
 	bool isAttached = false;
 
 	// Use this for initialization
@@ -21,11 +19,7 @@ public class ViveRiderScript : MonoBehaviour {
 		{
 			chariot = GameObject.Find("Chariot(Clone)");
 			head = GameObject.Find("Avatar(Clone)");
-			left = GameObject.Find("LHand(Clone)");
-			right = GameObject.Find("RHand(Clone)");
 			head.transform.SetParent(chariot.transform);
-			left.transform.SetParent(chariot.transform);
-			right.transform.SetParent(chariot.transform);
 			isAttached = true;
 		}
 	}

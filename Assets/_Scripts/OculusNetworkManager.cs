@@ -5,8 +5,6 @@ using UnityEngine;
 public class OculusNetworkManager : MonoBehaviour {
 
 	public GameObject headPrefab;
-	public GameObject leftHandPrefab;
-	public GameObject rightHandPrefab;
 
     public ArrowManager arrowManager;
 
@@ -55,8 +53,6 @@ public class OculusNetworkManager : MonoBehaviour {
 	{
 		Debug.Log("OnJoinedRoom() called by PUN. Now this client is in a room. From here on, your game would be running. For reference, all callbacks are listed in enum: PhotonNetworkingMessage");
 		PhotonNetwork.Instantiate (headPrefab.name, OculusManager.Instance.head.transform.position, OculusManager.Instance.head.transform.rotation, 0);
-		//PhotonNetwork.Instantiate (leftHandPrefab.name, OculusManager.Instance.leftHand.transform.position, OculusManager.Instance.leftHand.transform.rotation, 0);
-		//PhotonNetwork.Instantiate (rightHandPrefab.name, OculusManager.Instance.rightHand.transform.position, OculusManager.Instance.rightHand.transform.rotation, 0);
         arrowManager.JoinedRoom();
 	}
 }
