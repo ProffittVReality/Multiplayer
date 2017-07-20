@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -288,10 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headPrefab: {fileID: 1263761498566252, guid: e1226efa29789ec408ea5e4e5712eeb1, type: 2}
-  leftHandPrefab: {fileID: 1884293024771808, guid: b100be85c2756f94788782358ee524ec,
-    type: 2}
-  rightHandPrefab: {fileID: 1884293024771808, guid: 77ae67550d11208488ecbb011b9617df,
-    type: 2}
+  leftHandPrefab: {fileID: 0}
+  rightHandPrefab: {fileID: 0}
+  arrowManager: {fileID: 1332194395}
   Version: 1
 --- !u!4 &480357427
 Transform:
@@ -424,6 +423,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraRig: {fileID: 1332194387}
   bike: {fileID: 336376470}
+--- !u!114 &1332194395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332194387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85d94397ed57dc4e9a141836aef0d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 1200332370626208, guid: 89247be9568a1494594046bca07bc7f3,
+    type: 2}
+  bowPrefab: {fileID: 1293677667667114, guid: 6e124e06eaf6b6449b491a57f3927aa6, type: 2}
 --- !u!1 &1355583881 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100014, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}

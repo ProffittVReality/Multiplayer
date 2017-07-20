@@ -186,6 +186,7 @@
     <None Include="Assets\OVR\Resources\Unlit Transparent Color.shader" />
     <None Include="Assets\OVR\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\OVR\Shaders\Unlit Crosshair.shader" />
+    <None Include="Assets\PBR Ground Materials #1 [Dirt&amp; Grass]\Documentation.txt" />
     <None Include="Assets\PUNVoice\DemoVoice\Audio\Pop-J_Fairba-8421_hifi.mp3.txt" />
     <None Include="Assets\PUNVoice\DemoVoice\Audio\Reminder-public_d-291_hifi.mp3.txt" />
     <None Include="Assets\PUNVoice\DemoVoice\Fonts\Orbitron Black.txt" />

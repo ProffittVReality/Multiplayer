@@ -596,12 +596,15 @@
     <Compile Include="Assets\VZ\Scripts\core\VZPlugin.cs" />
     <Compile Include="Assets\VZ\Scripts\test\VZBikeAnim.cs" />
     <Compile Include="Assets\VZ\Scripts\test\VZBikeTest.cs" />
+    <Compile Include="Assets\_Scripts\Arrow.cs" />
+    <Compile Include="Assets\_Scripts\ArrowManager.cs" />
     <Compile Include="Assets\_Scripts\ChariotCopy.cs" />
     <Compile Include="Assets\_Scripts\ChariotScript.cs" />
     <Compile Include="Assets\_Scripts\CopyScript.cs" />
     <Compile Include="Assets\_Scripts\OculusCopyScript.cs" />
     <Compile Include="Assets\_Scripts\OculusManager.cs" />
     <Compile Include="Assets\_Scripts\OculusNetworkManager.cs" />
+    <Compile Include="Assets\_Scripts\PointSystem.cs" />
     <Compile Include="Assets\_Scripts\RiderScript.cs" />
     <Compile Include="Assets\_Scripts\ViveManager.cs" />
     <Compile Include="Assets\_Scripts\ViveNetworkManager.cs" />
@@ -618,6 +621,7 @@
     <None Include="Assets\OVR\Resources\Unlit Transparent Color.shader" />
     <None Include="Assets\OVR\Shaders\OVRColorRampAlpha.shader" />
     <None Include="Assets\OVR\Shaders\Unlit Crosshair.shader" />
+    <None Include="Assets\PBR Ground Materials #1 [Dirt&amp; Grass]\Documentation.txt" />
     <None Include="Assets\PUNVoice\DemoVoice\Audio\Pop-J_Fairba-8421_hifi.mp3.txt" />
     <None Include="Assets\PUNVoice\DemoVoice\Audio\Reminder-public_d-291_hifi.mp3.txt" />
     <None Include="Assets\PUNVoice\DemoVoice\Fonts\Orbitron Black.txt" />
