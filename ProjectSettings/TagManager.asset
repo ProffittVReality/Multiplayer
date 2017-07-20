@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bow
+  - Target
+  - One Point
+  - Two Point
+  - Three Point
+  - Four Point
+  - Five Point
   layers:
   - Default
   - TransparentFX

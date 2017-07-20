@@ -9,17 +9,28 @@ public class PointSystem : MonoBehaviour {
 
 	PhotonView photonView;
 
-	// Use this for initialization
-	void Start () {
+    public static PointSystem Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
+
+    // Use this for initialization
+    void Start () {
 		points = 0;		
 		photonView = PhotonView.Get (this);
 	}
 
 	void Update() {
-		print (points);
-		if (Input.GetKeyDown ("space")) {
-			photonView.RPC ("PunAddPoints", PhotonTargets.All, 1);
-		}
+
 	}
 
 	// local method
@@ -36,6 +47,7 @@ public class PointSystem : MonoBehaviour {
 	[PunRPC]
 	void PunAddPoints(int amnt) {
 		points += amnt;
+        print("points: " + points);
 	}
 
 	// method to update all point managers
