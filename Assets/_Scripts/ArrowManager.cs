@@ -75,8 +75,6 @@ public class ArrowManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        print(arrowHand);
-
         if (bowAttached)
         {
             AttachArrow();
@@ -85,7 +83,6 @@ public class ArrowManager : MonoBehaviour {
         if (joinedRoom)
         {
             stringAttachPoint = GameObject.Find("string");
-            print(GameObject.Find("string"));
             arrowStartPoint = GameObject.Find("ArrowStart");
             stringStartPoint = GameObject.Find("StringStart");
         }
@@ -94,7 +91,6 @@ public class ArrowManager : MonoBehaviour {
 
     private void PullString()
     {
-        print(isAttached);
         if (isAttached)
         {
             float dist = (stringStartPoint.transform.position - arrowHand.transform.position).magnitude;
@@ -133,6 +129,7 @@ public class ArrowManager : MonoBehaviour {
             // attach to hand
             currentArrow.transform.SetParent(arrowHand.transform);
             currentArrow.transform.localPosition = new Vector3(0f, 0f, 0.34f);
+            currentArrow.transform.localRotation = Quaternion.identity;
 
             // set currentArrow as currentArrowVisual's parent in copy script
             currentArrowVisual.GetComponent<ArrowCopy>().SetParent(currentArrow);
@@ -150,7 +147,7 @@ public class ArrowManager : MonoBehaviour {
         bow.transform.rotation = bowVisual.transform.rotation;
         
         // rotate for starting position and attach to chariot
-        bow.transform.Rotate(new Vector3(0f, 180f, 0f));
+        //bow.transform.Rotate(new Vector3(0f, 180f, 0f));
         bow.transform.SetParent(chariot.transform);
 
         // set bow as bowVisual's parent in copy script
@@ -163,6 +160,8 @@ public class ArrowManager : MonoBehaviour {
         {
             bow.transform.position = gripHand.transform.position;
             bow.transform.rotation = gripHand.transform.rotation;
+            if (gripHand == OculusManager.Instance.rightHand)
+                bow.transform.Rotate(new Vector3(0f, 0f, 180f));
             bow.transform.SetParent(gripHand.transform);
             bowAttached = true;
         }

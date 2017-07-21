@@ -25,8 +25,6 @@ public class RiderScript : MonoBehaviour {
         {
             chariot = GameObject.Find("Chariot(Clone)");
             head = GameObject.Find("Avatar(Clone)");
-            //left = GameObject.Find("LHand(Clone)");
-            //right = GameObject.Find("RHand(Clone)");
 
             ArrowManager.Instance.CreateBow(chariot);
             
@@ -43,8 +41,6 @@ public class RiderScript : MonoBehaviour {
             avatar.transform.SetParent(chariot.transform);
             bike.transform.SetParent(chariot.transform);
             head.transform.SetParent(chariot.transform);
-            //left.transform.SetParent(chariot.transform);
-            //right.transform.SetParent(chariot.transform);
             isAttached = true;
         }
     }

@@ -64,7 +64,7 @@ public class Arrow : MonoBehaviour {
             r.velocity = new Vector3(0f, 0f, 0f);
             // turn off gravity
             r.useGravity = false;
-            CollectPoints();
+            StartCoroutine(CollectPoints());
         }
     }
 
@@ -90,8 +90,9 @@ public class Arrow : MonoBehaviour {
         ArrowManager.Instance.AttachBowToArrow();
     }
 
-    private void CollectPoints()
+    IEnumerator CollectPoints()
     {
+        yield return new WaitForSeconds(0.2f);
         if (fivePoint)
             PointSystem.Instance.AddPoints(5);
         else if (fourPoint)
