@@ -49,4 +49,6 @@ MonoBehaviour:
   - PhotonAttack
   - PhotonKill
   - PhotonSetInactive
+  - ChangeArrowName
+  - PhotonChangeName
   DisableAutoOpenWizard: 1

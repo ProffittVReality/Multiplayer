@@ -28,6 +28,8 @@ public class ArrowManager : MonoBehaviour {
     private GameObject gripHand;
     private GameObject arrowHand;
 
+    GameObject chariot;
+
     private void Awake()
     {
         if (Instance == null)
@@ -77,7 +79,8 @@ public class ArrowManager : MonoBehaviour {
 
         if (bowAttached)
         {
-            AttachArrow();
+            chariot = GameObject.Find("Chariot(Clone)");
+            AttachArrow(chariot);
         }
         
         if (joinedRoom)
@@ -104,6 +107,7 @@ public class ArrowManager : MonoBehaviour {
     private void Fire()
     {
         currentArrow.transform.parent = null;
+        currentArrowVisual.transform.parent = null;
         currentArrow.GetComponent<Arrow>().IsFired();
         Rigidbody r = currentArrow.GetComponent<Rigidbody>();
         // set velocity based on distance of pull
@@ -118,7 +122,7 @@ public class ArrowManager : MonoBehaviour {
         stringAttachPoint.transform.position = stringStartPoint.transform.position;
     }
 
-    private void AttachArrow()
+    private void AttachArrow(GameObject chariot)
     {
         if (joinedRoom && currentArrow == null)
         {
@@ -133,6 +137,7 @@ public class ArrowManager : MonoBehaviour {
 
             // set currentArrow as currentArrowVisual's parent in copy script
             currentArrowVisual.GetComponent<ArrowCopy>().SetParent(currentArrow);
+            currentArrowVisual.transform.SetParent(chariot.transform);
         }
     }
 
@@ -147,8 +152,8 @@ public class ArrowManager : MonoBehaviour {
         bow.transform.rotation = bowVisual.transform.rotation;
         
         // rotate for starting position and attach to chariot
-        //bow.transform.Rotate(new Vector3(0f, 180f, 0f));
         bow.transform.SetParent(chariot.transform);
+        bowVisual.transform.SetParent(chariot.transform);
 
         // set bow as bowVisual's parent in copy script
         bowVisual.GetComponent<BowCopy>().SetParent(bow);
