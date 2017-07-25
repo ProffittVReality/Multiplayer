@@ -168,6 +168,7 @@
     <None Include="Assets\VZ\Resources\VZControllerMap.xml" />
     <None Include="Assets\VZ\Shaders\NoZ.shader" />
     <None Include="Assets\VZ\Shaders\NoZFont.shader" />
+    <None Include="Assets\_Scripts\_ScriptREADME.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

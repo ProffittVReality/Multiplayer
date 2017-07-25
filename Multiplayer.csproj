@@ -626,6 +626,7 @@
     <Compile Include="Assets\_Scripts\ChariotCopy.cs" />
     <Compile Include="Assets\_Scripts\ChariotScript.cs" />
     <Compile Include="Assets\_Scripts\CopyScript.cs" />
+    <Compile Include="Assets\_Scripts\EnemyController.cs" />
     <Compile Include="Assets\_Scripts\EnemyScript.cs" />
     <Compile Include="Assets\_Scripts\HandSelector.cs" />
     <Compile Include="Assets\_Scripts\OculusCopyScript.cs" />
@@ -633,6 +634,7 @@
     <Compile Include="Assets\_Scripts\OculusNetworkManager.cs" />
     <Compile Include="Assets\_Scripts\PointSystem.cs" />
     <Compile Include="Assets\_Scripts\RiderScript.cs" />
+    <Compile Include="Assets\_Scripts\TestScript.cs" />
     <Compile Include="Assets\_Scripts\ViveManager.cs" />
     <Compile Include="Assets\_Scripts\ViveNetworkManager.cs" />
     <Compile Include="Assets\_Scripts\ViveRiderScript.cs" />
@@ -691,6 +693,7 @@
     <None Include="Assets\VZ\Resources\VZControllerMap.xml" />
     <None Include="Assets\VZ\Shaders\NoZ.shader" />
     <None Include="Assets\VZ\Shaders\NoZFont.shader" />
+    <None Include="Assets\_Scripts\_ScriptREADME.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
