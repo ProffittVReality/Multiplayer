@@ -626,6 +626,7 @@
     <Compile Include="Assets\_Scripts\ChariotCopy.cs" />
     <Compile Include="Assets\_Scripts\ChariotScript.cs" />
     <Compile Include="Assets\_Scripts\CopyScript.cs" />
+    <Compile Include="Assets\_Scripts\EnemyScript.cs" />
     <Compile Include="Assets\_Scripts\HandSelector.cs" />
     <Compile Include="Assets\_Scripts\OculusCopyScript.cs" />
     <Compile Include="Assets\_Scripts\OculusManager.cs" />
@@ -635,6 +636,7 @@
     <Compile Include="Assets\_Scripts\ViveManager.cs" />
     <Compile Include="Assets\_Scripts\ViveNetworkManager.cs" />
     <Compile Include="Assets\_Scripts\ViveRiderScript.cs" />
+    <Compile Include="Assets\cha_data\Script\ScreenShot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
