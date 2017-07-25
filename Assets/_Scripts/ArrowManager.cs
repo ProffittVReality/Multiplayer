@@ -120,6 +120,9 @@ public class ArrowManager : MonoBehaviour {
 
         // reset position of string attach point
         stringAttachPoint.transform.position = stringStartPoint.transform.position;
+
+        // change name of arrow to attach next arrow on vive (called from oculus)
+        currentArrowVisual.GetComponent<ArrowCopy>().ChangeName();
     }
 
     private void AttachArrow(GameObject chariot)

@@ -29,13 +29,13 @@ public class ArrowCopy : MonoBehaviour {
         parentSet = true;
     }
 
-    void ChangeName()
+    public void ChangeName()
     {
         photonView.RPC("PhotonChangeName", PhotonTargets.All);
     }
 
     [PunRPC]
-    public void PhotonChangeName()
+    void PhotonChangeName()
     {
         name = "old";
     }
