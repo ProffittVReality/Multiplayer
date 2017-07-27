@@ -13,6 +13,8 @@ TagManager:
   - Five Point
   - Left Hand
   - Right Hand
+  - Enemy
+  - Chariot
   layers:
   - Default
   - TransparentFX

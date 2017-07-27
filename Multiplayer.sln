@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiplayer.Plugins", "Mult
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiplayer", "Multiplayer.csproj", "{5ECD35DC-CF75-E071-39DC-2ABB93196E69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiplayer.Editor.Plugins", "Multiplayer.Editor.Plugins.csproj", "{841C7458-8D9C-48C6-4209-173D68198401}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiplayer.Editor", "Multiplayer.Editor.csproj", "{057097E0-4071-97C7-CB22-5199180A5F56}"
 EndProject
 Global
@@ -21,6 +23,10 @@ Global
 		{5ECD35DC-CF75-E071-39DC-2ABB93196E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ECD35DC-CF75-E071-39DC-2ABB93196E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ECD35DC-CF75-E071-39DC-2ABB93196E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841C7458-8D9C-48C6-4209-173D68198401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841C7458-8D9C-48C6-4209-173D68198401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841C7458-8D9C-48C6-4209-173D68198401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841C7458-8D9C-48C6-4209-173D68198401}.Release|Any CPU.Build.0 = Release|Any CPU
 		{057097E0-4071-97C7-CB22-5199180A5F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{057097E0-4071-97C7-CB22-5199180A5F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{057097E0-4071-97C7-CB22-5199180A5F56}.Release|Any CPU.ActiveCfg = Release|Any CPU

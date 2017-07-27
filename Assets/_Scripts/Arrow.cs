@@ -66,6 +66,10 @@ public class Arrow : MonoBehaviour {
             r.useGravity = false;
             StartCoroutine(CollectPoints());
         }
+        if (collider.tag == "Enemy")
+        {
+            collider.GetComponent<EnemyScript>().Kill();
+        }
     }
 
     private void OnTriggerStay(Collider collider)

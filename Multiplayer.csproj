@@ -626,6 +626,7 @@
     <Compile Include="Assets\_Scripts\ChariotCopy.cs" />
     <Compile Include="Assets\_Scripts\ChariotScript.cs" />
     <Compile Include="Assets\_Scripts\CopyScript.cs" />
+    <Compile Include="Assets\_Scripts\EnemyAIScript.cs" />
     <Compile Include="Assets\_Scripts\EnemyController.cs" />
     <Compile Include="Assets\_Scripts\EnemyScript.cs" />
     <Compile Include="Assets\_Scripts\HandSelector.cs" />
@@ -674,6 +675,10 @@
     <None Include="Assets\Plugins\Photon3Unity3D.xml" />
     <None Include="Assets\Plugins\PhotonVoiceApi\readme.txt" />
     <None Include="Assets\Plugins\release_history.txt" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_Blit.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_BlitFlip.shader" />

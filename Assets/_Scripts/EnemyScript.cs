@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour {
 
+    // This script controls enemy animation and states
+
     bool running;
     bool killed;
     bool attack;
+
+    bool cantMove;
 
     bool setInactive;
 
@@ -14,6 +18,9 @@ public class EnemyScript : MonoBehaviour {
     public KeyCode killKey;
 
     PhotonView photonView;
+
+    bool hasAttacked = false;
+    bool hasDied = false;
 
 	// Use this for initialization
 	void Start () {
@@ -36,17 +43,20 @@ public class EnemyScript : MonoBehaviour {
             GetComponent<Animation>().CrossFade("Dead", 0.01f);
             killed = false;
             running = false;
+            hasDied = true;
             PhotonSetInactive();
         }
         if (attack)
         {
             GetComponent<Animation>().CrossFade("Attack", 0.01f);
             StartCoroutine(AttackToRun());
+            PhotonSetInactive();
         }
 
         if (setInactive)
         {
-            Destroy(gameObject, 5f);
+            // after attack or kill, enemy will be de-instantiated
+            Destroy(gameObject, 15f);
         }
            
     }
@@ -56,21 +66,30 @@ public class EnemyScript : MonoBehaviour {
         yield return new WaitForSeconds(0.53f);
         attack = false;
         running = true;
+        hasAttacked = true;
     }
 
     // local method, calls photon method
     public void Attack()
     {
-        photonView.RPC("PhotonAttack", PhotonTargets.All);
-        
+        if (!cantMove)
+            photonView.RPC("PhotonAttack", PhotonTargets.All);
+        // if enemy has already attacked, can't attack again or be killed
+        cantMove = true;
     }
 
     // local method, calls photon method
     public void Kill()
     {
-        photonView.RPC("PhotonKill", PhotonTargets.All);
+        if (!cantMove)
+        {
+            photonView.RPC("PhotonKill", PhotonTargets.All);
+        }
+        // once killed, cannot take further action
+        cantMove = true;
     }
 
+    // methods tagged "PunRPC" change variables of this object on all local servers
     [PunRPC]
     public void PhotonAttack()
     {
@@ -89,6 +108,16 @@ public class EnemyScript : MonoBehaviour {
     public void PhotonSetInactive()
     {
         setInactive = true;
+    }
+
+    public bool IsDead()
+    {
+        return hasDied;
+    }
+
+    public bool HasAttacked()
+    {
+        return hasAttacked;
     }
 
 }
