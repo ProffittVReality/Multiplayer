@@ -7,6 +7,18 @@ public class PointSystem : MonoBehaviour {
 	int points;
 	int timeRemaining;
 
+	public float disabilityTime;
+
+	bool slowMode;
+	bool shieldMode;
+	bool noPointMode;
+	bool doublePointMode;
+
+	public GameObject yellowSphere;
+	public GameObject blueSphere;
+	public GameObject redSphere;
+	public GameObject greenSphere;
+
 	PhotonView photonView;
 
     public static PointSystem Instance;
@@ -30,7 +42,10 @@ public class PointSystem : MonoBehaviour {
 	}
 
 	void Update() {
-
+		yellowSphere.SetActive (slowMode);
+		blueSphere.SetActive (shieldMode);
+		redSphere.SetActive (noPointMode);
+		greenSphere.SetActive (doublePointMode);
 	}
 
 	// local method
@@ -43,9 +58,77 @@ public class PointSystem : MonoBehaviour {
 		photonView.RPC ("PunSubtractPoints", PhotonTargets.All, amnt);
 	}
 
+	public void SlowMode(bool mode) {
+		photonView.RPC ("PunSlowMode", PhotonTargets.All, mode);
+		if (mode)
+			StartCoroutine (StopSlowMode());
+	}
+
+	IEnumerator StopSlowMode() {
+		yield return new WaitForSeconds (disabilityTime);
+		SlowMode (false);
+	}
+
+	public void ShieldMode(bool mode) {
+		photonView.RPC ("PunShieldMode", PhotonTargets.All, mode);
+		if (mode)
+			StartCoroutine (StopShieldMode ());
+	}
+
+	IEnumerator StopShieldMode() {
+		yield return new WaitForSeconds (disabilityTime);
+		ShieldMode (false);
+	}
+
+	public void NoPointMode(bool mode) {
+		photonView.RPC ("PunNoPointMode", PhotonTargets.All, mode);
+		if (mode)
+			StartCoroutine (StopNoPointMode ());
+	}
+
+	IEnumerator StopNoPointMode() {
+		yield return new WaitForSeconds (disabilityTime);
+		NoPointMode (false);
+	}
+
+	public void DoublePointMode(bool mode) {
+		photonView.RPC ("PunDoublePointMode", PhotonTargets.All, mode);
+		if (mode)
+			StartCoroutine (StopDoublePointMode ());
+	}
+
+	IEnumerator StopDoublePointMode() {
+		yield return new WaitForSeconds (disabilityTime);
+		DoublePointMode (false);
+	}
+
+	[PunRPC]
+	void PunSlowMode(bool mode) {
+		slowMode = mode;
+	}
+
+	[PunRPC]
+	void PunShieldMode(bool mode) {
+		shieldMode = mode;
+	}
+
+	[PunRPC]
+	void PunNoPointMode(bool mode) {
+		noPointMode = mode;
+	}
+
+	[PunRPC]
+	void PunDoublePointMode(bool mode) {
+		doublePointMode = mode;
+	}
+
 	// method to update all point managers
 	[PunRPC]
 	void PunAddPoints(int amnt) {
+		if (doublePointMode)
+			amnt *= 2;
+		if (noPointMode)
+			amnt = 0;
 		points += amnt;
         print("points: " + points);
 	}
@@ -53,7 +136,8 @@ public class PointSystem : MonoBehaviour {
 	// method to update all point managers
 	[PunRPC]
 	public void PunSubtractPoints(int amnt) {
-		points -= amnt;
+		if (!shieldMode)
+			points -= amnt;
 		// cannot have negative points
 		if (points < 0)
 			points = 0;

@@ -52,6 +52,22 @@ public class VZPlayer : MonoBehaviour
    public static VZPlayer Instance { get; private set; }
    public static VZController Controller { get; private set; }
 
+	// game specific method
+	public void HalfSpeed(float numSeconds) {
+		// set conditions for half speed (NOTE: set to less than half speed for greater effect)
+		mSpeedMultiplier = 0.3f;
+
+		// set a timer to set the conditions back to normal
+		StartCoroutine(BackToNormal(numSeconds));
+	}
+
+	// game specific method
+	IEnumerator BackToNormal(float numSeconds) {
+		yield return new WaitForSeconds (numSeconds);
+		// set speed conditions back to normal;
+		mSpeedMultiplier = 1f;
+	}
+
    public void Initialize(Vector3 position, Quaternion rotation)
    {
       Rigidbody rb = GetComponent<Rigidbody>();

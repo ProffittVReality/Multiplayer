@@ -596,6 +596,7 @@
      <Compile Include="Assets\_Scripts\EnemyController.cs" />
      <Compile Include="Assets\_Scripts\EnemyScript.cs" />
      <Compile Include="Assets\_Scripts\HandSelector.cs" />
+     <Compile Include="Assets\_Scripts\InsideOutSphere.cs" />
      <Compile Include="Assets\_Scripts\OculusCopyScript.cs" />
      <Compile Include="Assets\_Scripts\OculusManager.cs" />
      <Compile Include="Assets\_Scripts\OculusNetworkManager.cs" />

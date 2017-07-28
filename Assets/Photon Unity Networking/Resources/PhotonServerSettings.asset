@@ -51,4 +51,8 @@ MonoBehaviour:
   - PhotonSetInactive
   - ChangeArrowName
   - PhotonChangeName
+  - PunDoublePointMode
+  - PunNoPointMode
+  - PunShieldMode
+  - PunSlowMode
   DisableAutoOpenWizard: 1
