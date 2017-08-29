@@ -134,10 +134,6 @@
       <Project>{5ECD35DC-CF75-E071-39DC-2ABB93196E69}</Project>
       <Name>Multiplayer</Name>
     </ProjectReference>
-    <ProjectReference Include="Multiplayer.Editor.Plugins.csproj">
-      <Project>{841C7458-8D9C-48C6-4209-173D68198401}</Project>
-      <Name>Multiplayer.Editor.Plugins</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\OVR\Editor\OVRBuild.cs" />
@@ -217,10 +213,6 @@
     <None Include="Assets\Plugins\Photon3Unity3D.xml" />
     <None Include="Assets\Plugins\PhotonVoiceApi\readme.txt" />
     <None Include="Assets\Plugins\release_history.txt" />
-    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
-    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_Blit.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_BlitFlip.shader" />

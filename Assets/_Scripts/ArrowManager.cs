@@ -106,8 +106,8 @@ public class ArrowManager : MonoBehaviour {
 
     private void Fire()
     {
-        currentArrow.transform.parent = null;
-        currentArrowVisual.transform.parent = null;
+		currentArrow.transform.parent = chariot.transform;
+		currentArrowVisual.transform.parent = chariot.transform;
         currentArrow.GetComponent<Arrow>().IsFired();
         Rigidbody r = currentArrow.GetComponent<Rigidbody>();
         // set velocity based on distance of pull
@@ -123,6 +123,7 @@ public class ArrowManager : MonoBehaviour {
 
         // change name of arrow to attach next arrow on vive (called from oculus)
         currentArrowVisual.GetComponent<ArrowCopy>().ChangeName();
+
     }
 
     private void AttachArrow(GameObject chariot)
