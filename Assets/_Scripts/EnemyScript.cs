@@ -56,7 +56,7 @@ public class EnemyScript : MonoBehaviour {
         if (setInactive)
         {
             // after attack or kill, enemy will be de-instantiated
-            Destroy(gameObject, 15f);
+            Destroy(gameObject, 10f);
         }
            
     }

@@ -106,8 +106,8 @@ public class ArrowManager : MonoBehaviour {
 
     private void Fire()
     {
-		currentArrow.transform.parent = chariot.transform;
-		currentArrowVisual.transform.parent = chariot.transform;
+		currentArrow.transform.parent = null;
+		currentArrowVisual.transform.parent = null;
         currentArrow.GetComponent<Arrow>().IsFired();
         Rigidbody r = currentArrow.GetComponent<Rigidbody>();
         // set velocity based on distance of pull

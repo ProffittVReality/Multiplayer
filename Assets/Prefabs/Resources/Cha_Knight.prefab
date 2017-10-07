@@ -1140,7 +1140,7 @@ MonoBehaviour:
   playerDistance: 0
   lookDistance: 15
   rotationDamping: 10
-  moveSpeed: 1
+  moveSpeed: 4
 --- !u!136 &136067487433270622
 CapsuleCollider:
   m_ObjectHideFlags: 1

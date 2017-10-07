@@ -16,6 +16,11 @@ public class Arrow : MonoBehaviour {
 
     OVRInput.Button handButton;
 
+	GameObject chariot;
+	bool chariotFound = false;
+
+	private bool gotChariotVelocity = false;
+
 	// Use this for initialization
 	void Start () {
         triggerDown = false;
@@ -28,9 +33,18 @@ public class Arrow : MonoBehaviour {
         if (ArrowManager.Instance.BowAttached() && OVRInput.GetUp(ArrowManager.Instance.GetButton()))
             triggerDown = false;
 
+		if (!chariotFound) {
+			chariot = GameObject.Find ("Chariot (Copy)");
+			chariotFound = true;
+		}
+
         if (isFired)
         {
             transform.LookAt(transform.position + transform.GetComponent<Rigidbody>().velocity);
+			if (!gotChariotVelocity) {
+				transform.GetComponent<Rigidbody> ().velocity += chariot.GetComponent<Rigidbody> ().velocity;
+				gotChariotVelocity = true;
+			}
         }
 
         if (ArrowManager.Instance.BowAttached())
@@ -64,6 +78,9 @@ public class Arrow : MonoBehaviour {
             r.velocity = new Vector3(0f, 0f, 0f);
             // turn off gravity
             r.useGravity = false;
+			// un-parent arrow
+			transform.parent = null;
+
             StartCoroutine(CollectPoints());
         }
         if (collider.tag == "Enemy")
