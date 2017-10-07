@@ -34,8 +34,9 @@ public class Arrow : MonoBehaviour {
             triggerDown = false;
 
 		if (!chariotFound) {
-			chariot = GameObject.Find ("Chariot (Copy)");
-			chariotFound = true;
+			chariot = GameObject.Find ("Chariot(Clone)");
+			if (chariot != null)
+				chariotFound = true;
 		}
 
         if (isFired)

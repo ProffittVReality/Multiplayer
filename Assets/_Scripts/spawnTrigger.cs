@@ -21,7 +21,9 @@ public class spawnTrigger : MonoBehaviour {
 	}
 
 	void onTriggerEnter(Collider collider) {
-		if (collider.gameObject.tag == "Bow") {
+		Debug.Log (collider.gameObject.tag);
+		Debug.Log (collider.gameObject.name);
+		if (collider.gameObject.tag == "Chariot") {
 			// instantiate new enemies
 			Debug.Log("make some enemies");
 			EnemyController.Instance.InstantiateEnemy(position1);
