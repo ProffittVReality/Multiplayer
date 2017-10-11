@@ -42,10 +42,11 @@ public class Arrow : MonoBehaviour {
         if (isFired)
         {
             transform.LookAt(transform.position + transform.GetComponent<Rigidbody>().velocity);
-			if (!gotChariotVelocity) {
+			transform.SetParent (chariot.transform);
+			/*if (!gotChariotVelocity) {
 				transform.GetComponent<Rigidbody> ().velocity += chariot.GetComponent<Rigidbody> ().velocity;
 				gotChariotVelocity = true;
-			}
+			}*/
         }
 
         if (ArrowManager.Instance.BowAttached())
@@ -80,7 +81,7 @@ public class Arrow : MonoBehaviour {
             // turn off gravity
             r.useGravity = false;
 			// un-parent arrow
-			transform.parent = null;
+
 
             StartCoroutine(CollectPoints());
         }

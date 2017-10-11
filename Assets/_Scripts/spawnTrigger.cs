@@ -10,6 +10,8 @@ public class spawnTrigger : MonoBehaviour {
 	public Vector3 position4;
 	public Vector3 position5;
 
+	bool done = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,17 +22,15 @@ public class spawnTrigger : MonoBehaviour {
 		
 	}
 
-	void onTriggerEnter(Collider collider) {
-		Debug.Log (collider.gameObject.tag);
-		Debug.Log (collider.gameObject.name);
-		if (collider.gameObject.tag == "Chariot") {
+	void OnTriggerEnter(Collider collider) {
+		if (collider.gameObject.tag == "Chariot" && !done) {
 			// instantiate new enemies
-			Debug.Log("make some enemies");
 			EnemyController.Instance.InstantiateEnemy(position1);
 			EnemyController.Instance.InstantiateEnemy(position2);
 			EnemyController.Instance.InstantiateEnemy(position3);
 			EnemyController.Instance.InstantiateEnemy(position4);
 			EnemyController.Instance.InstantiateEnemy(position5);
+			done = true;
 		}
 	}
 }
