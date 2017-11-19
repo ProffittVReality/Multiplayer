@@ -72,6 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4801270525636386}
   - component: {fileID: 95009856187395270}
+  - component: {fileID: 114719270434181528}
   m_Layer: 0
   m_Name: Double Points
   m_TagString: Untagged
@@ -191,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355339900979278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.064444, y: -3.0840156, z: 53.84235}
+  m_LocalPosition: {x: 24.064444, y: -4.3, z: 53.84235}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4133472012490430}
@@ -409,6 +410,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 65
   reverse: 1
+--- !u!114 &114719270434181528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355339900979278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!114 &114808675036431670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,7 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b85439ae58625d7448f7218d11aea15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupType: 
+  powerupType: Double Points
+  disappear: {fileID: 95009856187395270}
 --- !u!135 &135191396008659754
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -444,7 +472,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135769756381136096
 SphereCollider:

@@ -601,6 +601,7 @@
      <Compile Include="Assets\_Scripts\OculusManager.cs" />
      <Compile Include="Assets\_Scripts\OculusNetworkManager.cs" />
      <Compile Include="Assets\_Scripts\PointSystem.cs" />
+     <Compile Include="Assets\_Scripts\PowerupManager.cs" />
      <Compile Include="Assets\_Scripts\RiderScript.cs" />
      <Compile Include="Assets\_Scripts\TestScript.cs" />
      <Compile Include="Assets\_Scripts\ViveManager.cs" />
@@ -680,10 +681,10 @@
  <HintPath>C:/Program Files/Unity5.5/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/VReality/Documents/GitHub/Multiplayer/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/VRPCII/Documents/GitHub/Multiplayer/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="websocket-sharp">
- <HintPath>C:/Users/VReality/Documents/GitHub/Multiplayer/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
+ <HintPath>C:/Users/VRPCII/Documents/GitHub/Multiplayer/Assets/Plugins/WebSocket/websocket-sharp.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -19,6 +19,8 @@ public class PointSystem : MonoBehaviour {
 	public GameObject redSphere;
 	public GameObject greenSphere;
 
+	public UnityEngine.UI.Text scoreText;
+
 	PhotonView photonView;
 
     public static PointSystem Instance;
@@ -46,6 +48,7 @@ public class PointSystem : MonoBehaviour {
 		blueSphere.SetActive (shieldMode);
 		redSphere.SetActive (noPointMode);
 		greenSphere.SetActive (doublePointMode);
+		scoreText.text = "score: " + points.ToString();
 	}
 
 	// local method

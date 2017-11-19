@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4930201704308248}
   - component: {fileID: 95596567405502004}
+  - component: {fileID: 114453386349799678}
   m_Layer: 0
   m_Name: Half Points
   m_TagString: Untagged
@@ -110,6 +111,7 @@ GameObject:
   - component: {fileID: 135905697379704086}
   - component: {fileID: 23764336998626742}
   - component: {fileID: 114076255801221606}
+  - component: {fileID: 114919211797083272}
   m_Layer: 0
   m_Name: PowerUp
   m_TagString: Untagged
@@ -190,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1287516034070092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.427725, y: -3.1729438, z: 56.81696}
+  m_LocalPosition: {x: 28.427725, y: -4.3, z: 56.81696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4402105793358430}
@@ -395,6 +397,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 65
   reverse: 0
+--- !u!114 &114453386349799678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1287516034070092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 0
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
 --- !u!114 &114733489343002208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,6 +449,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 99
   reverse: 1
+--- !u!114 &114919211797083272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524188137303402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85439ae58625d7448f7218d11aea15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupType: Half Points
+  disappear: {fileID: 95596567405502004}
 --- !u!135 &135703266818197762
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -443,7 +484,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198360911924858686
 ParticleSystem:
